@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+:root {
+    --color-dark: hsl(217, 19%, 35%);
+    --color-dark-light: hsl(214, 17%, 51%);
+    --color-grey: hsl(212, 23%, 69%);
+    --color-grey-light: hsl(210, 46%, 95%);
+}
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Spartan', sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:  var(--color-grey-light);
+    
+}
+
+.card {
+    max-width: 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.card .header {
+    width: 100%;
+}
+
+.card .header .image {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    max-width: 500px;
+}
+
+.card .header .image img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    padding: 0 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.content .title {
+    margin-bottom: 1.5rem;
+}
+
+.content .title h1 {
+    line-height: 1.5;
+    color:#000000c2;
+    font-size: 1.6rem;
+}
+
+.content .text {
+    margin-bottom: 3.5rem;
+}
+
+.content .text p {
+    line-height: 1.6;
+    font-size: 1.3rem;
+    color: var(--color-dark-light);
+}
+
+.content .info {
+    display: flex;
+    
+    align-items: center;
+}
+
+.info .profile {
+    width: 50px;
+    margin-right: 2rem;
+}
+
+.info .profile img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.info .name {
+    margin-right: auto;
+}
+
+.info .name h2 {
+    color: #000000a3;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info .name p {
+    color: var(--color-grey);
+    font-size: 1rem;
+
+}
+
+.info .link {
+    padding: 1rem;
+    background: var(--color-grey-light);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+    .card {
+        flex-direction: row;
+        max-width: 900px;
+    }
+
+    .card .header .image {
+        height: 330px;
+        display: flex;
+        
+    }
+
+    .card .title h1 {
+        font-size: 2.3rem;
+    }
+}
