@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+
+
+:root {
+
+    --color-blue: hsl(238, 29%, 16%);
+    --color-red: hsl(14, 88%, 65%);
+    --color-primary: hsl(237, 12%, 33%);
+
+
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+    
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%) );
+    
+}
+
+.card {
+    display: flex;
+    width: 330px;
+    margin: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.image {
+    background-image: url(images/illustration-woman-online-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 250px;
+    min-width: 250px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-57%, -91%);
+    z-index: 1;
+    
+}
+
+.image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 87%;
+    background-position-y: 64%;
+    background-position-x: 90%;
+}
+
+.card .title {
+    margin-top: 14rem;
+    margin-bottom: 3rem;
+}
+
+.card .title h1 {
+    font-size: 3rem;
+}
+
+.card .list {
+    width: 85%;
+    height: 300px;
+}
+
+.card .list p {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+
+.card .list .answer p {
+    display: none;
+}
+
+
+.card .list .active p{
+    display: block;
+    margin-bottom: 1.8rem;
+    font-size: 1.2rem;
+    width: 90%;
+    color: hsl(0deg 0% 66%);
+}
+
+.card .list .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+
+}
+
+.card .list .question h3 {
+    font-weight: 400;
+    color: hsl(240, 6%, 50%);
+    font-size: 1.3rem;
+    
+}
+
+.card .list .active h3{
+    font-weight: bold;
+    color: black;
+}
+
+.card .list .answer {
+    border-bottom: 1px solid #80808045;
+    margin-bottom: 1.8rem;
+}
+
+
+.card .list .active img{
+    transform: rotate(180deg);
+}
+
