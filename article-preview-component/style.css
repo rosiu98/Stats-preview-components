@@ -136,6 +136,15 @@ body {
     border-radius: 50%;
     cursor: pointer;
     position: relative;
+    display: none;
+}
+
+#buttonClose {
+    padding: 1rem;
+    background: var(--color-grey-light);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
 }
 
  .display {
@@ -168,11 +177,41 @@ body {
     letter-spacing: 3px;
 }
 
+.display-mobile {
+    background-color: var(--color-dark);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.display-mobile .mobile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: auto;
+}
+
+.display-mobile  p {
+    color: white;
+    letter-spacing: 3px;
+    margin-right: 2rem;
+}
+
+.display-mobile .click {
+    border-radius: 50%;
+    padding: 1rem;
+    background: var(--color-grey-light);
+}
+
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 @media only screen and (min-width: 1024px) {
+
+
     .card {
         flex-direction: row;
         max-width: 900px;
@@ -186,6 +225,14 @@ body {
 
     .card .title h1 {
         font-size: 2.3rem;
+    }
+
+    #buttonClose {
+        display: none;
+    }
+
+    .info .link {
+        display: block;
     }
 
 }
