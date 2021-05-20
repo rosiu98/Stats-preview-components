@@ -30,19 +30,106 @@ html {
 body {
     width: 100%;
     height: 100%;
+    font-family: 'Poppins', sans-serif;
+    /* max-width: 1440px;
+    margin: 0 auto;
+} */
 }
 
 
 .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    
+    padding-top: 10rem;
+    background: var(--color-light-gray);
 }
 
 .header {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
+.header .title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.header .title h1 {
+    font-weight: 200;
+    line-height: 1.4;
+
+}
+
+.header .title h1 span {
+    font-weight: 600;
+    color:var(--color-dark-blue);
+}
+
+.header .text {
+    width: 62%;
+    margin-bottom: 4rem;
+}
+.header .text p {
+    font-size: 1.5rem;
+    color: var(--color-grey-blue);
+}
+
+.container .columns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.columns .card {
+    width: 300px;
+    background-color: white;
+    box-shadow: -2px 4px 10px rgb(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 3rem;
+    position: relative;
+}
+
+.card-1{
+    border-top: 3px solid var(--color-cyan);
+}
+
+.card-2{
+    border-top: 3px solid var(--color-red);
+    margin-bottom: 3rem;
+}
+
+.card-3{
+    border-top: 3px solid var(--color-orange);
+}
+
+.card-4{
+    border-top: 3px solid var(--color-blue);
+}
+
+
+.columns .card h2 {
+    color: var(--color-dark-blue);
+    margin-bottom: 1rem;
+}
+
+.columns .card p {
+    color: var(--color-grey-blue);
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.columns .card .image {
+    text-align: end;
+}
+
+@media only screen and (min-width: 962px) {
+    .container {
+        height: 100%;
+    }
+}
 
