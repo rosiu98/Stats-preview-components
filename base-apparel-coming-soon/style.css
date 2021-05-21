@@ -35,6 +35,22 @@ body {
     overflow-x: hidden;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    line-height: 0;
+}
+
+#error {
+    color:#ef6464ab;
+    padding: 1.5rem 2.4rem;
+    font-size: 1.3rem;
+    transition: 1s ease-out;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
 
 .container  {
     display: flex;
@@ -119,6 +135,14 @@ figure img {
     border-radius: 100px;
     border: 1px solid #ce979736;
     width: 85%;
+    position: relative;
+    transition: 1s ease-out;
+
+}
+
+.send button {
+    position: absolute;
+    right: -5px;
 }
 
 .send form input {
@@ -127,19 +151,30 @@ figure img {
     position: relative;
     border: none;
     outline: none;
-    flex: 1;
+    /* flex: 1; */
+    width: 70%;
 }
 
 .send form input::placeholder {
     color: #ce97979a;
 }
 
-.send form img {
+.wykrzyknik {
+    display: none;
+}
+
+.wykrzyknik img {
+    transition: 1s ease-out;
+}
+
+
+
+.send form .submit {
     padding: 1.5rem 4.2rem;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     box-shadow: 0 9px 15px rgba(0, 0, 0 , 0.2);
     border-radius: 100px;
-    cursor: pointer;
+    
 }
 
 @media only screen and (max-width: 1200px) {
@@ -204,6 +239,13 @@ figure img {
         top: 25px;
     }
 
+}
+
+
+@media only screen and (max-width: 375px) {
+    .send form .submit {
+        padding: 1.5rem 3rem;
+    }    
 }
 
 
