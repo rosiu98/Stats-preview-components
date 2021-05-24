@@ -72,6 +72,8 @@ body {
     margin-bottom: 5rem;
 }
 
+
+
 .content {
     display: flex;
     flex-direction: column;
@@ -132,7 +134,10 @@ body {
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
-.content .trial {
+.content .trial button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
     text-transform: uppercase;
     background-color: var(--color-green);
     color: #ffffffc4;
@@ -144,6 +149,8 @@ body {
     word-spacing: 3px;
     margin-bottom: 1rem;
 }
+
+
 
 .content .footer {
     text-align: center;
