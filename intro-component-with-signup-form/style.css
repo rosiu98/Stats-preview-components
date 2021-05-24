@@ -162,6 +162,12 @@ body {
     font-weight: 700;
 }
 
+@media only screen and (max-width: 374px) {
+    .wrapper {
+        min-width: fit-content;
+    }
+
+}
 
 @media only screen and (min-width: 500px) {
 
