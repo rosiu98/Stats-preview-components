@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="script.js" defer></script>
 
   <title>Intro component with sign up form</title>
 
@@ -35,18 +36,23 @@
         </div>
 
         <div class="sign-in">
-          <form action="">
+          <form action="/" method="GET" id="form">
 
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="text" placeholder="Email Address">
-            <input type="text" placeholder="Password">
+
+            <input type="text" name="first-name" id="first-name" placeholder="First Name">
+            <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+            <input type="text" name="email" id="email" placeholder="Email Address">
+            <input type="password" name="password" id="password" placeholder="Password">
+
+            <div class="trial">
+            <button type="submit">Claim your free trial</button>
+          </div>
 
           </form>
 
-          <div class="trial">
-            <p>Claim your free trial</p>
-          </div>
+          <!-- <div class="trial">
+            <button type="submit">Claim your free trial</button>
+          </div> -->
 
 
           <div class="footer">
