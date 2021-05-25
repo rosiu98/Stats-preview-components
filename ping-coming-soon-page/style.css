@@ -197,6 +197,11 @@ body {
 
     .error {
         order: 2;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1rem;
     }
 }
 
@@ -223,9 +228,6 @@ body {
         font-size: 2rem;
     }
 
-    .error {
-        
-    }
 
 }
 

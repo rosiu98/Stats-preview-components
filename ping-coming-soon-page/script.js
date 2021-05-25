@@ -14,15 +14,18 @@ form.addEventListener("submit", (e) => {
         error.innerText = "Email is required"
         error.style.display = "block"
         input.style.borderColor = "red"
+
     } else if (!input.value.match(pattern)) {
         e.preventDefault();
         error.innerText = "Please provide valid email address"
+        error.style.display = "block"
         input.style.borderColor = "red"
     }
 })
 
-input.addEventListener("focus", (e) => {
-    input.style.borderColor = "blue"
-    error.style.display = "none"
+
+input.addEventListener("focus", (event) => {
+    input.style.borderColor = "blue";
+    error.style.display = "none";
 })
 
