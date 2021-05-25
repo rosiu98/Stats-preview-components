@@ -1,51 +1,47 @@
-const input = document.querySelectorAll("input");
-console.log(input);
-const form = document.getElementById("form");
+'use strict'
 
-const errorElement = document.createElement("div");
+const form = document.getElementById("signup");
 
-input.forEach(input => {
-	input.after(errorElement);
-})
+const error = document.querySelectorAll(".input-error");
 
-console.log(input[0].parentNode)
+console.log(error[0].previousElementSibling)
 
 
-// Array.prototype.forEach.call(input, function (timestamp) {
-// 	const errorElement = document.createElement("div");
-//       timestamp.after(errorElement);
-      
-//     });
-
-
-function add (value) {
-		value.after(errorElement);
-	}
-
-for (let i = 0; i < input.length; i++) {
-	input[i].parentNode.insertBefore(errorElement, input[i].nextSibling)
-    }
-
+const requiredFields = [
+	{ input: form.elements[0], message: 'Name is required' },
+	{ input: form.elements[1], message: 'Last Name is required' },
+	{ input: form.elements[2], message: 'Email is required' },
+	{ input: form.elements[3], message: 'Password is required' }
+];
+// document.querySelector(".input-error").style.setProperty('--display', 'block');
 
 
 form.addEventListener("submit", (e) => {
-	
-	input.forEach(input => {
+	const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+	requiredFields.forEach((val, index) => {
+
+		if (val.input.value.trim() === "") {
+			e.preventDefault();
+			console.log(val.message)
+
+			error[index].innerText = val.message;
+			error[index].previousElementSibling.style.borderColor = "red"
+			error[index].previousElementSibling.placeholder = "";
+			error[index].style.setProperty('--display', 'block');
 
 
-		const messages = [];
-		if(input.value == '' || input.value == null) {
-			messages.push(input.name + "cannot be empty");
-			
+
+		}
+		else if (requiredFields[2].input.value != pattern) {
+			error[2].innerText = "Looks like this is not an email"
+			error[2].previousElementSibling.style.borderColor = "red"
+
 		}
 
-
-		if (messages.length > 0) {
-        e.preventDefault();
-        errorElement.innerText = messages.join(', ')
-        add(input);
-    }
 	})
 
-
+	// if (requiredFields[2].input.value != pattern) {
+	// 	error[2].innerText = "Looks like this is not an email"
+	// }
 })

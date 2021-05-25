@@ -8,7 +8,8 @@
     
     
     --color-grey-dark: hsl(249, 10%, 26%);
-    --color-grey: hsl(246, 25%, 77%);  
+    --color-grey: hsl(246, 25%, 77%); 
+    --display: none;
 }
 
 *,
@@ -150,6 +151,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.content .trial button:hover {
+    background-color: hsl(154, 59%, 60%);
+}
+
 
 
 .content .footer {
@@ -167,6 +172,26 @@ body {
     color: var(--color-red);
     text-decoration: none;
     font-weight: 700;
+}
+
+.input-error {
+    text-align: right;
+    color: var(--color-red);
+    position: relative;
+}
+
+.input-error:before {
+    background-image: url(images/icon-error.svg);
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    top: -60px;
+    right: 29px;
+    display: var(--display);
+    color: black;
+    
 }
 
 @media only screen and (max-width: 374px) {
@@ -222,6 +247,7 @@ body {
 
     .content .footer {
         font-size: 1rem;
+}
 }
 
 
