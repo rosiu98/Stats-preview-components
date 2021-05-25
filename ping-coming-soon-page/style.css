@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+
+:root {
+    --color-blue: hsl(223, 87%, 63%);
+
+    --color-light-blue: hsl(223, 100%, 88%);
+    --color-light-red: hsl(354, 100%, 66%);
+
+
+    --color-grey: hsl(0, 0%, 59%);
+    --color-dark: hsl(209, 33%, 12%);
+
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 55.5%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+
+.container {
+    height: 100vh;
+
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    min-width: 320px;
+    max-width: 650px;
+    /* height: 100%; */
+    
+}
+
+.header .logo {
+    margin-bottom: 5rem;
+}
+
+.header .title {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+
+.header .title h1 {
+    color: var(--color-grey);
+    font-weight: 300;
+}
+
+.header .title span {
+    color: var(--color-dark);
+    font-weight: 700;
+}
+
+.header .sub-title {
+    margin-bottom: 3rem;
+}
+
+.header .sub-title h2 {
+    color: var(--color-dark);
+    font-weight: 600;
+    opacity: 0.7;
+    font-size: 1.3rem;
+}
+
+#form {
+    margin-bottom: 7rem;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#form input {
+    width: 100%;
+    padding: 1.5rem 4rem;
+    border: 1px solid var(--color-light-blue);
+    border-radius: 100px;   
+    margin-bottom: 1.2rem;
+    outline: none;
+}
+
+#form input::placeholder {
+    color: var(--color-grey);
+    opacity: 0.5;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+#form button {
+    width: 100%;
+    padding: 1.5rem 4rem;
+    border: 1px solid var(--color-blue);
+    background-color: var(--color-blue);
+    border-radius: 100px; 
+    color: #ffffffd1;  
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    box-shadow: 0px 8px 4px rgb(0 0 0 / 5%);
+    cursor: pointer;
+}
+
+#form button:hover {
+    opacity: 0.9;
+    transition: .2s ease-out;
+}
+
+.image {
+    margin-bottom: 8rem;
+}
+
+.image img {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.links a {
+    padding: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-light-blue);
+
+}
+
+.links a:hover  {
+    color: white !important;
+    background-color: var(--color-blue);
+
+}
+
+.links a:hover >  i {
+    color: white !important;
+}
+
+.links i {
+    font-size: 1.5rem;
+    color: var(--color-blue);
+}
+
+.fa-facebook-f {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: -1px;
+}
+
+.footer p {
+    color: var(--color-grey);
+}
+
+
+.error {
+    display: none;
+    color: var(--color-light-red);
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+}
+
+@media only screen and (max-width: 600px){
+    .card {
+        height: 100%;
+        margin: 5rem 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #form input {
+        order: 1;
+    }
+
+    #form button {
+        order: 3;
+    }
+
+    .error {
+        order: 2;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #form {
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+    }
+
+    #form input {
+        width: 66%;
+        margin-right: 2rem;
+        margin-bottom: 0;
+        
+    }
+
+    #form button {
+        width: 30%;
+        
+    }
+
+    .header .title{
+        font-size: 2rem;
+    }
+
+    .error {
+        
+    }
+
+}
+
+@media only screen and (max-height: 840px){
+    .card {
+        height: 100%;
+        margin: 5rem 0;
+    }
+
+}
