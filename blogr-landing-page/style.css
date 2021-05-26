@@ -63,6 +63,11 @@ a {
     align-items: center;
 }
 
+.nav-mobile {
+    display: none;
+    cursor:pointer;
+}
+
 .nav .logo {
     margin-right: 7rem;
     line-height: 0;
@@ -328,6 +333,117 @@ footer .footer .footer-links a {
 
 footer .footer .footer-links a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .container {
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+    }
+
+    footer .footer .footer-links {
+        
+
+        flex: 1;
+        gap:unset;
+        justify-content: space-evenly;
+    }
+
+    footer .footer {
+        gap: unset;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    footer {
+        padding-left: 0;
+        gap:50%;
+    }
+
+    .nav .links,
+    .register {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+        margin-right: unset;
+    }
+
+    .nav .logo {
+        margin-right: auto;
+    }
+
+    .content .title {
+        
+        font-size: 2.1rem;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        grid-template-areas: 
+        "first"
+        "second"
+        ;
+        padding: 10%;
+    }
+
+    .container .right {
+        grid-area: first;
+        width: 100%;
+        right: unset;
+    }
+
+    .oferta .container .right {
+        /* position: relative; */
+        right: unset;
+        left: unset;
+    }
+
+    .oferta .container {
+        padding-right: unset;
+        padding: 10%;
+    }
+
+
+
+    .container .left {
+        grid-area: second;
+        width: 100%;
+    }
+
+    .about {
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    .about p {
+        width: 100%;
+    }
+
+    .state {
+        height: 80%;
+    }
+
+    .state .card {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 
