@@ -114,7 +114,7 @@ header {
     margin-bottom: 1rem;
 }
 
-.content .text {
+.content .sub-title {
     margin-top: 5px;
     color: var(--color-white);
     opacity: 0.7;
@@ -142,6 +142,57 @@ header {
     background-color: transparent;
     border: 1px solid #ffffff78;
     color: var(--color-white);
+}
+
+main {
+    
+    overflow: hidden;
+}
+
+main .main-title {
+    margin-top: 15rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--color-headings);
+
+}
+
+main .container {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-left:10%;
+    margin-top: -8rem;
+    margin-bottom: 2rem;
+    
+}
+
+.container .right {
+    width: 132%;
+    position: relative;
+    right: -3%;
+}
+
+.container .right img {
+    width: 100%;
+}
+
+.container .left {
+    width: 85%;
+}
+
+.container .left .text h3  {
+    color: var(--color-headings);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.container .left .text p  {
+    color: #686868;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 /* font-family: 'Ubuntu', sans-serif; */
