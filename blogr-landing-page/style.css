@@ -97,6 +97,12 @@ a {
     margin-right: 11px;
 }
 
+.nav .register .sign-up:hover {
+    transition: .2s ease-in;
+    background: var(--color-hover);
+    color: var(--color-white);
+}
+
 .nav .links a {
     display: flex;
     align-items: center;
@@ -146,10 +152,22 @@ a {
     margin-right: 11px;
 }
 
+.buttons .start:hover {
+    transition: .2s ease-in;
+    background: var(--color-hover);
+    color: var(--color-white);
+}
+
 .buttons .learn {
     background-color: transparent;
     border: 1px solid #ffffff78;
     color: var(--color-white);
+}
+
+.buttons .learn:hover {
+    transition: .2s ease-in;
+    background-color: var(--color-white);
+    color: var(--color-hover);
 }
 
 main {
@@ -297,6 +315,8 @@ footer .footer .footer-links li {
     margin-bottom: 1rem;
 }
 
+
+
 footer .footer .footer-links li:last-child {
     margin-bottom: 0;
 }
@@ -304,6 +324,10 @@ footer .footer .footer-links li:last-child {
 
 footer .footer .footer-links a {
     color: #ffffffad;
+}
+
+footer .footer .footer-links a:hover {
+    text-decoration: underline;
 }
 
 
