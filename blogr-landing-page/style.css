@@ -50,6 +50,14 @@ header {
     border-radius: 0px 0px 0px 100px;
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -149,7 +157,7 @@ main {
     overflow: hidden;
 }
 
-main .main-title {
+ .main-title {
     margin-top: 15rem;
     text-align: center;
     font-size: 1.8rem;
@@ -157,7 +165,7 @@ main .main-title {
 
 }
 
-main .container {
+.container {
     
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -202,7 +210,7 @@ main .container {
     height: 40vh;
     background-image: url(images/bg-pattern-circles.svg), linear-gradient(to right ,hsl(237, 17%, 21%),hsl(237, 23%, 32%));
     /* background-size: 100%; */
-    border-radius: 0px 100px 0px 100px;
+    border-radius: 0px 100px 0px 150px;
     background-position: -50% 78%;
     background-repeat: no-repeat;
 }
@@ -219,7 +227,7 @@ main .container {
 .phones img {
     width: 100%;
     position: relative;
-    top: -64px;
+    top: -80px;
     max-width: 550px;
 }
 
@@ -238,8 +246,70 @@ main .container {
 }
 
 .oferta {
-    height: 100vh;
+    overflow: hidden;
 }
+
+.oferta .container {
+    margin: 13rem 0;
+    padding-left: unset;
+    padding-right: 10%;
+}
+
+.oferta .container .right {
+    
+    /* position: relative; */
+    right: unset;
+    left: -37%;
+}
+
+footer {
+    height: 40vh;
+    background: var(--color-footer-bg);
+    padding-left: 10%;
+    padding-top: 6rem;
+    border-radius: 0px 100px 0px 0px;
+}
+
+footer .footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 14rem;
+}
+
+.footer .logo {
+    line-height: 1;
+}
+
+
+footer .footer .footer-links {
+    display: flex;
+    padding-top: 1.5rem;
+    font-size: 1.4rem;
+    gap: 21rem;
+}
+
+footer .footer .footer-links h4 {
+    color: var(--color-white);
+    margin-bottom: 2.5rem;
+}
+
+footer .footer .footer-links li {
+    margin-bottom: 1rem;
+}
+
+footer .footer .footer-links li:last-child {
+    margin-bottom: 0;
+}
+
+
+footer .footer .footer-links a {
+    color: #ffffffad;
+}
+
+
+
+
+
 
 /* font-family: 'Ubuntu', sans-serif; */
 
