@@ -172,3 +172,60 @@ body{
     margin-bottom: 1.5rem;
 }
 
+@media only screen and (max-width: 1100px){
+    .container{
+    padding: 10% 5rem;
+
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .content {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        grid-template-areas: 
+        "item1 item1 item2"
+        "item4 item5 item5"
+        "item3 item3 item3"
+        ;
+
+        grid-template-rows: max-content max-content max-content;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .item .header {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+    .content {
+        grid-template-columns: 1fr;
+
+        grid-template-areas: 
+        "item1"
+        "item2"
+        "item4"
+        "item5"
+        "item3"
+        ;
+
+        grid-template-rows: max-content minmax(220px, max-content) minmax(220px, max-content) max-content max-content;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .item1::before {
+        right: 0;
+    }
+
+    .item3 .title {
+        margin-bottom: 1.5rem;
+    }
+}
