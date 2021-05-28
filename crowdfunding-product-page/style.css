@@ -68,6 +68,24 @@ body{
         align-items: center;
     }
 
+    .active {
+        display: flex !important;
+    }
+
+    .active img {
+        content: url(images/icon-close-menu.svg);
+    }
+
+    .bookmarked img {
+        content: url(images/icon-bookmark-checked.svg);
+    }
+
+    .bookmarked span {
+        color: var(--color-green-dark) !important;
+    }
+
+
+
 
 header {
     background-image: linear-gradient(rgba(0,0,0, .5), rgba(255,255,255, 0.1)),url(images/image-hero-desktop.jpg);
@@ -84,6 +102,7 @@ header .navigation{
     align-items: center;
     padding: 0 11%;
     padding-top: 5rem;
+    position: relative;
 }
 
 header .navigation .menu {
@@ -97,6 +116,7 @@ header .navigation .menu img {
 header .navigation .links {
     display: flex;
     gap: 3rem;
+    z-index: 50;
 }
 
 header .navigation .links a {
@@ -257,7 +277,7 @@ header .navigation .links a:hover {
     font-size: 1.8rem;
 }
 
-.box .box-title p {
+.box .box-title p{
     color: var(--color-green);
 }
 
@@ -278,15 +298,69 @@ header .navigation .links a:hover {
     gap: 2.5rem;
 }
 
-.box-display .box-count {
+.box-count {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+}
+
+.box-count p {
+    color: var(--color-grey) !important;
 }
 
 .box-display .box-count h3 {
     font-size: 3.3rem;
 }
+
+
+.back-project {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    backdrop-filter: brightness(0.5);
+    display: none;
+}
+
+.back-project .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    width: 90%;
+}
+
+.back-project .container .card {
+    padding: 4.5rem;
+}
+
+.back-project .container .card .selects {
+    margin-top: 0;
+}
+
+.title-back-project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-back-project img {
+    cursor: pointer;
+}
+
+.title-back-project h3 {
+    font-size: 2rem;
+    
+}
+
+.back-project-main .selects .box .box-title p{
+    flex: 0 0 50%;
+}  
+
 
 
 
@@ -330,6 +404,36 @@ header .navigation .links a:hover {
 
     header .navigation .links {
         display: none;
+    }
+
+    header .navigation .links {
+        flex-direction: column;
+        gap: 2rem;
+        position: absolute;
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%,80%);
+        z-index: 50;
+        background-color: #fff;
+        padding: 2rem 0;
+        border-radius: 5px;
+        
+    }
+
+    header .navigation .links a {
+        color: var(--color-dark);
+        font-weight: 700;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e7e5e5a4;
+    }
+
+    header .navigation .links a:last-child {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    header .navigation .links p {
+        margin-left: 2rem;
     }
 
 
