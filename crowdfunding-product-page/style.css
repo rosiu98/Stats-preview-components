@@ -52,6 +52,11 @@ body{
         background-color: var(--color-green);
     }
 
+    .button1:hover {
+        transition: .2s ease-in;
+        background-color: var(--color-green-dark);
+    }
+
     .button2 {
         color: #fcfcfc;
         background-color: var(--color-grey);
@@ -81,6 +86,14 @@ header .navigation{
     padding-top: 5rem;
 }
 
+header .navigation .menu {
+    display: none;
+}
+
+header .navigation .menu img {
+    width: 22px;
+}
+
 header .navigation .links {
     display: flex;
     gap: 3rem;
@@ -92,6 +105,10 @@ header .navigation .links a {
     text-decoration: none;
 }
 
+header .navigation .links a:hover {
+    text-decoration: underline;
+}
+
 .container {
     max-width: 730px;
     margin: auto;
@@ -100,6 +117,7 @@ header .navigation .links a {
     background-color: transparent;
     display: grid;
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .container .main-logo {
@@ -166,8 +184,9 @@ header .navigation .links a {
 }
 
 .count .item:last-child {
-    border-right: none;
+    border: none;
     flex: auto;
+    padding: 0;
 }
 
 .count .item h1{
@@ -230,6 +249,8 @@ header .navigation .links a {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .box .box-title h3 {
@@ -254,6 +275,7 @@ header .navigation .links a {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 2.5rem;
 }
 
 .box-display .box-count {
@@ -267,3 +289,56 @@ header .navigation .links a {
 }
 
 
+
+@media only screen and (max-width: 1100px) {
+    header {
+        height: 35vh;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    header {
+        background-image: linear-gradient(rgba(0,0,0, .5), rgba(255,255,255, 0.1)),url(images/image-hero-mobile.jpg);
+    }
+
+    .container {
+        margin: 0 5%;
+        margin-top: -10rem;
+        margin-bottom: 3rem;
+    }
+
+    .card {
+        padding: 0 2.5rem;
+    }
+
+    .card .count {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .count .item {
+        border-right: none;
+        border-bottom: 1px solid #7a7a7a75;
+        padding-bottom: 3rem;
+    }
+
+    header .navigation .menu {
+        display: block;
+    }
+
+    header .navigation .links {
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+.buttons span {
+    display: none;
+}
+
+}
