@@ -52,6 +52,11 @@ body{
         background-color: var(--color-green);
     }
 
+    .button2 {
+        color: #fcfcfc;
+        background-color: var(--color-grey);
+    }
+
     .bookmark {
         padding: 0;
         display: flex;
@@ -204,5 +209,61 @@ header .navigation .links a {
     font-size: 1.6rem;
 }
 
+.selects {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2.5rem;
+}
+
+.box {
+    padding: 3rem;
+    border: 2px solid #dfdede;
+    border-radius: 5px;
+}
+
+.box:last-child {
+    opacity: 0.3;
+}
+
+.box .box-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.box .box-title h3 {
+    font-size: 1.8rem;
+}
+
+.box .box-title p {
+    color: var(--color-green);
+}
+
+.box .box-text {
+    margin-bottom: 4rem;
+}
+
+.box .box-text p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.box .box-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box-display .box-count {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box-display .box-count h3 {
+    font-size: 3.3rem;
+}
 
 
