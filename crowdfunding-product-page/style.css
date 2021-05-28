@@ -188,3 +188,21 @@ header .navigation .links a {
     border-radius: 100px;
 }
 
+.card .about {
+    margin: 4rem 0;
+}
+
+.about .about-title {
+    font-size: 1.4rem;
+}
+
+.about .text {
+    line-height: 1.8;
+}
+
+.about .text p{
+    font-size: 1.6rem;
+}
+
+
+
