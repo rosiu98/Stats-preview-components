@@ -6,9 +6,47 @@ const popup = document.querySelector(".back-project");
 const html = document.querySelector("html");
 const closeModal = document.querySelector(".close-modal");
 
+const box = document.querySelectorAll(".box");
+
+
 const input = document.querySelectorAll("input");
 
-console.log(input.checked)
+const checked1 = document.querySelector('input[name="item"]:checked')
+
+if (checked1 != null) {
+    box[0].style.borderColor = "red"
+}
+
+console.log(box)
+
+
+input.forEach((val, index) => {
+    val.addEventListener('click', (e) => {
+        if (val.checked) {
+            box[index].lastElementChild.style.display = "flex";
+        }
+
+        if (val.checked === false) {
+            box[index].lastElementChild.style.display = "none";
+        }
+    })
+
+})
+
+
+input.forEach((val, index) => {
+    val.addEventListener('click', (e) => {
+        if (val.checked) {
+            box[index].lastElementChild.style.display = "flex";
+        }
+
+        if (val.checked === false) {
+            box[index].lastElementChild.style.display = "none";
+        }
+    })
+
+})
+
 
 
 function checking() {
@@ -40,5 +78,6 @@ closeModal.addEventListener('click', (e) => {
     popup.style.display = "none";
     html.style.fontSize = "62.5%";
 })
+
 
 

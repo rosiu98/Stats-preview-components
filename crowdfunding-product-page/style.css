@@ -359,7 +359,11 @@ header .navigation .links a:hover {
 
 .back-project-main .selects .box .box-title p{
     flex: 0 0 50%;
-}  
+}
+
+.back-project-main .box .box-display {
+    display: none;
+}
 
 
 
