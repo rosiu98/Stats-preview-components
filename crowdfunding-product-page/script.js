@@ -8,26 +8,28 @@ const closeModal = document.querySelector(".close-modal");
 
 const box = document.querySelectorAll(".box");
 
+const arrayBox = [box[0], box[1], box[2]];
+
 
 const input = document.querySelectorAll("input");
 
 const checked1 = document.querySelector('input[name="item"]:checked')
 
-if (checked1 != null) {
-    box[0].style.borderColor = "red"
-}
 
-console.log(box)
+console.log(checked1)
 
 
 input.forEach((val, index) => {
     val.addEventListener('click', (e) => {
-        if (val.checked) {
-            box[index].lastElementChild.style.display = "flex";
+        if (checked1 === null) {
+            arrayBox.forEach(box => {
+                box.lastElementChild.style.display = "none"
+            })
         }
 
-        if (val.checked === false) {
-            box[index].lastElementChild.style.display = "none";
+
+        if (val.checked) {
+            box[index].lastElementChild.style.display = "flex";
         }
     })
 
