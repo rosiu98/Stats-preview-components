@@ -1,0 +1,38 @@
+.about {
+    height: 100vh;
+    position: relative;
+    padding: 0 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__text {
+        align-self: end;
+        padding-left: 8rem;
+        padding-top: 10rem;
+        background: $white;
+        margin-left: -16rem;
+
+        &__title {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+
+            h2 {
+                font-weight: 300;
+            }
+
+        }
+
+        &__paragraph {
+            color: $dark-grey;
+            font-size: 1.5rem;
+            line-height: 1.7;
+        }
+    }
+}
