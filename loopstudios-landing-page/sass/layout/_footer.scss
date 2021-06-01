@@ -1,0 +1,54 @@
+
+.footer {
+    display: grid;
+    background: $black;
+    padding: 4rem 12%;
+    align-items: center;
+
+    &__content {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    &__logo {
+        img {
+            width: 40%;
+        }
+    }
+
+    &__icons {
+        ul {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    &__links {
+        ul {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            align-items: center; 
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+    }
+
+    &__copy {
+        
+        p {
+            color: $dark-grey;
+            font-size: 1.3rem;
+        }
+    }
+
+
+    &__copy {
+        color: $white;
+    }
+
+}

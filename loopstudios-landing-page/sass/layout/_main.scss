@@ -1,0 +1,45 @@
+.main {
+    padding: 0 12%;
+
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8rem;
+
+        &__title {
+            font-size: 3rem;
+            text-transform: uppercase;
+            
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 15%;
+
+        &__item {
+            position: relative;
+
+
+            h3 {
+                color: $white;
+                font-size: 3rem;
+                position: absolute;
+                bottom: 0;
+                padding-left: 3.5rem;
+                padding-bottom: 3.5rem;                
+                text-transform: uppercase;
+                width: 80%;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

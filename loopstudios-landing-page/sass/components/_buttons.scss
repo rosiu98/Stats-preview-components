@@ -1,0 +1,11 @@
+.button {
+    text-transform: uppercase;
+    padding: 0.8rem 4rem;
+    color: $black;
+    letter-spacing: 3px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid $dark-grey;
+}
