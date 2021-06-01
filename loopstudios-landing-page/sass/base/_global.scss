@@ -19,6 +19,11 @@ li {
     list-style: none;
 }
 
+li:hover {
+    border-bottom: 1px solid $white;
+    transition: .2s linear;
+}
+
 a {
     text-decoration: none;
     color: #fff;

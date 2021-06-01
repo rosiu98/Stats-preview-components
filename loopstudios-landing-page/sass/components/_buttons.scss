@@ -8,4 +8,11 @@
     background-color: transparent;
     cursor: pointer;
     border: 1px solid $dark-grey;
+    transition: .3s ease-in-out;
+}
+
+.button:hover {
+    background-color: $black;
+    color: $white;
+    
 }
