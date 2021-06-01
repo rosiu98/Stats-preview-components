@@ -10,24 +10,47 @@
         grid-template-columns: max-content max-content;
         justify-content: space-between;
         gap: 2rem;
+
+        @include responsive(tablet) {
+        grid-template-areas: "logo"
+        "links"
+        "icons"
+        "copy";
+
+        justify-content: center;
+        text-align: center;
+        }
     }
 
     &__logo {
+        @include responsive(tablet) {
+        grid-area: logo;
+        }
         img {
             width: 40%;
         }
     }
 
     &__icons {
+        @include responsive(tablet) {
+            grid-area: icons;
+            }
         ul {
             display: flex;
             gap: 1.5rem;
             justify-content: flex-end;
             align-items: center;
+
+            @include responsive(tablet) {
+                justify-content: center;
+                }
         }
     }
 
     &__links {
+        @include responsive(tablet) {
+            grid-area: links;
+            }
         ul {
             display: flex;
             gap: 3rem;
@@ -35,20 +58,21 @@
             align-items: center; 
             font-size: 1.5rem;
             opacity: 0.9;
+
+            @include responsive(tablet) {
+                flex-direction: column;
+                }
         }
     }
 
     &__copy {
-        
+        @include responsive(tablet) {
+            grid-area: copy;
+            }
         p {
             color: $dark-grey;
             font-size: 1.3rem;
         }
-    }
-
-
-    &__copy {
-        color: $white;
     }
 
 }

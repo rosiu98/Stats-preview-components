@@ -21,6 +21,10 @@
         gap: 3rem;
         margin-bottom: 15%;
 
+        @include responsive(tablet) {
+            grid-template-columns: 1fr;
+        }
+
         &__item {
             position: relative;
             cursor: pointer;

@@ -8,7 +8,15 @@
 
     &__content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+
+        @include responsive(laptop) {
+            grid-template-columns: auto;
+        }
+
+        &__image img {
+            width: 100%;
+        }
     }
 
     &__text {
@@ -17,6 +25,12 @@
         padding-top: 10rem;
         background: $white;
         margin-left: -16rem;
+
+        @include responsive(laptop) {
+            margin-left: 0;
+            padding-left: 0;
+            text-align: center;
+        }
 
         &__title {
             font-size: 3rem;
